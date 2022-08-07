@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: dev.ivanqueiroz
+testFramework: junit
+sourceLanguage: java
+buildTool: maven
+features: [ annotation-api, app-name, data, data-jpa, h2, hibernate-validator, http-client, jackson-databind, java, java-application, jdbc-hikari, junit, logback, lombok, maven, mockito, netty-server, openapi, readme, shade, yaml ]
