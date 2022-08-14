@@ -6,8 +6,9 @@ import io.swagger.v3.oas.annotations.info.*;
 
 @OpenAPIDefinition(
         info = @Info(
-                title = "nauthorus",
-                version = "0.0"
+                title = "Nauthorus",
+                version = "1.0",
+                description = "REST API that convert rates between currencies."
         )
 )
 public class Application {

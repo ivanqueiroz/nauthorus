@@ -109,6 +109,11 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
+            <groupId>io.micronaut</groupId>
+            <artifactId>micronaut-management</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
             <groupId>io.swagger.core.v3</groupId>
             <artifactId>swagger-annotations</artifactId>
             <scope>compile</scope>
@@ -161,7 +166,7 @@
                     <!-- <useIncrementalCompilation>false</useIncrementalCompilation> -->
 
                     <annotationProcessorPaths combine.self="override">
-                         <path>
+                        <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
                             <version>${lombok.version}</version>
@@ -201,10 +206,17 @@
                             <artifactId>micronaut-openapi</artifactId>
                             <version>${micronaut.openapi.version}</version>
                         </path>
+                        <path>
+                            <groupId>io.micronaut.openapi</groupId>
+                            <artifactId>micronaut-openapi</artifactId>
+                            <version>4.4.3</version>
+                        </path>
                     </annotationProcessorPaths>
+                    <fork>true</fork>
                     <compilerArgs>
                         <arg>-Amicronaut.processing.group=dev.ivanqueiroz</arg>
                         <arg>-Amicronaut.processing.module=nauthorus</arg>
+                        <arg>-Amicronaut.openapi.views.spec=rapidoc.enabled=true,swagger-ui.enabled=true,swagger-ui.theme=flattop</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>
